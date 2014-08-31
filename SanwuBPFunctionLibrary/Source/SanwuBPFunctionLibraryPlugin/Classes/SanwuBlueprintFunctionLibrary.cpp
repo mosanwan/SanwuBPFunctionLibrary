@@ -17,3 +17,9 @@ USanwuSocketObject* USanwuBlueprintFunctionLibrary::CreateSocketObject()
 	socketObj=ConstructObject<USanwuSocketObject>(USanwuSocketObject::StaticClass());
 	return socketObj;
 }
+USanwuByteArray* USanwuBlueprintFunctionLibrary::CreateByteArray()
+{
+	USanwuByteArray* byteArray;
+	byteArray = ConstructObject<USanwuByteArray>(USanwuByteArray::StaticClass());
+	return byteArray;
+}

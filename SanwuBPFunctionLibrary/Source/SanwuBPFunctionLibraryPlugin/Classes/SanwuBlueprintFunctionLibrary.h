@@ -33,5 +33,8 @@ class SANWUBPFUNCTIONLIBRARYPLUGIN_API USanwuBlueprintFunctionLibrary : public U
 
 	UFUNCTION(BlueprintCallable, Category = "Sanwu|GlobalFunctionLib|Socket")
 	static USanwuSocketObject* CreateSocketObject();
+
+	UFUNCTION(BlueprintCallable, Category = "Sanwu|GlobalFunctionLib|Socket|ByteArray")
+	static USanwuByteArray* CreateByteArray();
 	
 };

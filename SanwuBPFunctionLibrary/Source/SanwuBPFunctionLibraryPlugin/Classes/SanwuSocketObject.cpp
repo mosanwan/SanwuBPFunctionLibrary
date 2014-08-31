@@ -26,12 +26,14 @@ bool USanwuSocketObject::ConnectServer(FString ip, int32 port)
 
 	return MySocket_ins->Connect(*address);
 }
-bool USanwuSocketObject::SendData()
+bool USanwuSocketObject::SendData(USanwuByteArray* byteArray)
 {
-	FString serialized = TEXT("loadPlayer");
-	TCHAR *seChar = serialized.GetCharArray().GetData();
-	int32 size = FCString::Strlen(seChar);
-	int32 send = 0;
-	return MySocket_ins->Send((uint8*)TCHAR_TO_UTF8(seChar), size, send);
-	//return true;
+
+// 	FString serialized = TEXT("loadPlayer");
+// 	TCHAR *seChar = serialized.GetCharArray().GetData();
+// 	int32 size = FCString::Strlen(seChar);
+ 	int32 send = 0;
+	
+	bool successful=  MySocket_ins->Send((uint8*)TCHAR_TO_UTF8(byteArray->memeary), byteArray->size, send);
+	return successful;
 }
