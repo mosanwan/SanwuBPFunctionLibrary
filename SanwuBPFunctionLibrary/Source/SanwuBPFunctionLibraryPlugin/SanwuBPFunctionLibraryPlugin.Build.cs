@@ -20,7 +20,13 @@ namespace UnrealBuildTool.Rules
             PublicDependencyModuleNames.AddRange(
                 new string[]
 				{
-					"Core", "CoreUObject", "Engine", "InputCore","RHI"
+					"Core", 
+                    "CoreUObject", 
+                    "Engine", 
+                    "InputCore",
+                    "RHI",
+                    "Sockets",
+                    "Networking"
 				});
 
 

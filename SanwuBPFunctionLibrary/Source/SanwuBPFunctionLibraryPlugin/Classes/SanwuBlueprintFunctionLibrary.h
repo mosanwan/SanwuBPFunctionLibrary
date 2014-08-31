@@ -2,6 +2,10 @@
 
 #pragma once
 #include "SanwuBPFunctionLibraryPluginPrivatePCH.h"
+#include "SocketSubsystem.h"
+#include "IPAddress.h"
+#include "Sockets.h"
+#include "SanwuSocketObject.h"
 #include "SanwuBlueprintFunctionLibrary.generated.h"
 
 //class UVaQuoleUIComponent;
@@ -21,4 +25,13 @@ class SANWUBPFUNCTIONLIBRARYPLUGIN_API USanwuBlueprintFunctionLibrary : public U
 	*/
 	UFUNCTION(BlueprintCallable,Category="Sanwu|GlobalFunctionLib")
 	static UObject* GetSingleton();
+
+	/**
+	* Connect a socket server
+	*/
+
+
+	UFUNCTION(BlueprintCallable, Category = "Sanwu|GlobalFunctionLib|Socket")
+	static USanwuSocketObject* CreateSocketObject();
+	
 };

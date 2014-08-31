@@ -9,5 +9,11 @@ USanwuBlueprintFunctionLibrary::USanwuBlueprintFunctionLibrary(const class FPost
 UObject* USanwuBlueprintFunctionLibrary::GetSingleton()
 {
 	return GEngine->GameSingleton;
-	
+}
+
+USanwuSocketObject* USanwuBlueprintFunctionLibrary::CreateSocketObject()
+{
+	USanwuSocketObject* socketObj;
+	socketObj=ConstructObject<USanwuSocketObject>(USanwuSocketObject::StaticClass());
+	return socketObj;
 }
