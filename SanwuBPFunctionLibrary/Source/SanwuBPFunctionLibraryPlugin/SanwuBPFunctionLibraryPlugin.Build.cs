@@ -9,7 +9,7 @@ namespace UnrealBuildTool.Rules
         public SanwuBPFunctionLibraryPlugin(TargetInfo Target)
         {
 
-            if (Target == UnrealTargetPlatform.IOS)
+            
             PrivateIncludePaths.AddRange(
                 new string[] {
 					"SanwuBPFunctionLibraryPlugin/Private"
