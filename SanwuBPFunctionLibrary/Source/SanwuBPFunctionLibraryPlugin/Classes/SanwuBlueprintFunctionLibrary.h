@@ -6,6 +6,8 @@
 #include "IPAddress.h"
 #include "Sockets.h"
 #include "SanwuSocketObject.h"
+#include "SanwuHttpObject.h"
+#include "SanwuJsonObject.h"
 #include "SanwuBlueprintFunctionLibrary.generated.h"
 
 //class UVaQuoleUIComponent;
@@ -34,7 +36,13 @@ class SANWUBPFUNCTIONLIBRARYPLUGIN_API USanwuBlueprintFunctionLibrary : public U
 	UFUNCTION(BlueprintCallable, Category = "Sanwu|GlobalFunctionLib|Socket")
 	static USanwuSocketObject* CreateSocketObject();
 
+	UFUNCTION(BlueprintCallable, Category = "Sanwu|GlobalFunctionLib|Http")
+	static USanwuHttpObject* CreateHttpObject();
+
 	UFUNCTION(BlueprintCallable, Category = "Sanwu|GlobalFunctionLib|Socket|ByteArray")
 	static USanwuByteArray* CreateByteArray();
+
+	UFUNCTION(BlueprintCallable, Category = "Sanwu|GlobalFunctionLib|Json")
+	static USanwuJsonObject* CreateJsonObject();
 	
 };
